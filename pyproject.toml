@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shaula-ai"
+version = "0.0.2"
+description = "Verified skill bank and router for small language models (pre-alpha)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+# Enable component extras only after their distributions are published to PyPI.
+# router = ["shaula-skill-router>=0.1"]
+# maker = ["shaula-skill-maker>=0.1"]
+# compare = ["anomaly-lab-compare>=0.1"]
+
+[project.urls]
+Homepage = "https://github.com/shaula-ai/shaula"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/shaula"]
